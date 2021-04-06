@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "trem.h"
+#include "semaphore.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,7 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     trem3 = new Trem(3,850,90);
     trem4 = new Trem(4,330,270);
     trem5 = new Trem(5,600,270);
-
+    trem1->inicializacao();
     /*
      * Conecta o sinal UPDATEGUI à função UPDATEINTERFACE.
      * Ou seja, sempre que o sinal UPDATEGUI foi chamado, será executada a função UPDATEINTERFACE.

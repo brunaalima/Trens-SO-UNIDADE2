@@ -2,6 +2,8 @@
 #define TREM_H
 
 #include <QThread>
+#include "semaphore.h"
+
 
 /*
  * Classe Trem herda QThread
@@ -16,6 +18,16 @@ public:
     Trem(int,int,int);  //construtor
     void run();         //função a ser executada pela thread
     void setVelocidade(int v);
+    int getY();
+    int getX();
+    void inicializacao();
+    bool regiao_d(int tremID);
+    bool regiao_b(int tremID);
+    bool regiao_f1(int tremID);
+    bool regiao_f2(int tremID);
+    bool regiao_g(int tremID);
+    bool regiao_i(int tremID);
+    bool regiao_n(int tremID);
 
 
 
